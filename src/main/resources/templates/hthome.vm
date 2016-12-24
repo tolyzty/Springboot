@@ -1,0 +1,138 @@
+
+#parse("abc.vm")
+<input type="hidden" name="editid" id="editid" value="" />
+<div class="navbar-static-top" style="height: 50px;">
+    #parse("top.vm")
+</div>
+<div class="container-fluid bag">
+    #parse("index.vm")
+
+</div>
+
+<div class="nr" id="nr">
+    <div>
+        <div class="border">
+            <ol class="breadcrumb">
+                <li><a href="index.html">当前位置：首页</a></li>
+                <li class="active"  id="zibt"></li>
+                <li class="active" id="zbt"></li>
+            </ol>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="centeradd">
+        <div  class="censerah">
+            <span id="ceherd" class="ceherd"></span>
+        </div>
+        <div class="centerser">
+           #* <a style="color: #000000;">查询时间：</a>
+            <input type="text" name="startime" id="startime" value=""  class="form-control"/>-
+            <input type="text" name="endtime" id="endtime" value=""  class="form-control" />
+
+            <input type="text" name="searchuser" id="searchuser" placeholder="姓名/邮箱/手机号"  class="form-control" />
+            <button type="button" class="btn btn-success "  id="searchbtn">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <span>搜索用户</span>
+            </button>*#
+        </div>
+
+
+        <div style="height: 90px; width: 500px;padding-top:10px;padding-left: 20px;">
+
+            <a class="btn btn-success" href="#" role="button" data-toggle="modal"  data-target="#myModal" id="adduser" disabled="disabled"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp;&nbsp;新增用户</a>
+            <a class="btn btn-info" href="#" role="button" disabled="disabled"><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;修改用户</a>
+            <a class="btn btn-danger" href="#" role="button"  disabled="disabled"><i class="glyphicon glyphicon-trash"></i>&nbsp;&nbsp;删除用户</a>
+            <a class="btn btn-warning" href="#" role="button" disabled="disabled"><i class="glyphicon glyphicon-download-alt"></i>&nbsp;&nbsp;导出列表</a>
+        </div>
+
+        <div class="table-responsive" style="padding-left:20px;padding-right: 20px;margin-top:-20px;">
+            <div style="height:600px;">
+                <h1>欢迎来到后台首页</h1>
+            #*    <table class="table table-bordered" >
+                    <thead>
+                    <tr class="info">
+                        <td >
+                            <div class="checkbox">
+                                <label>
+                                    <span>序号</span>
+                                </label>
+                            </div>
+                        </td>
+                        <td >名称</td>
+                        <td >简介</td>
+                        <td >内容</td>
+                        <td >图片名称</td>
+                        <td >时间</td>
+                        <td width="100px">状态</td>
+                        <td align="center">操作</td>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        #foreach($s in $msg)
+                        <tr class="infonr">
+                            <td>$!{velocityCount}</td>
+                            <td  width="100px">${s.gywmName}</td>
+                            #if(!${s.gywmJj})
+                                <td> </td>
+                            #else
+                                <td>${s.gywmJj}</td>
+                            #end
+                        *##*##*set($str=$!{s.gywmNr}) #set($str=$str.substring(5,20))*##*
+
+
+
+                            <td >111</td>
+                            <td >${s.gywmTpwjm}</td>
+                            <td >$!date.format('yyyy-MM-dd',$!s.gywmCzsj)</td>
+                            #if(${s.gywmZt}==0)
+                                <td style="color: green;">发布中</td>
+                            #end
+                            <td class="caozuo">
+                                <a class="glyphicon glyphicon-edit" title="编辑"  id="edituser" onclick="edituser("+u.user_id+")" ></a>
+                                <a class="glyphicon glyphicon-trash" title="删除" data-toggle="modal" data-target="#modelete" ></a>
+                                <a class="glyphicon glyphicon-align-justify" title="查看详情"  href="gsxwx/${s.gywmId}"></a>
+                            </td>
+                        </tr>
+                        #end
+                    </tbody>
+
+                </table>*#
+            </div>
+
+           <script>
+                var ide = 3;
+                var idea = 4;
+                var a = "公司新闻";
+                var b ="最新公告";
+                var c ="行业动态"
+                var gsxw = "gsxw";
+                var nrgl ="内容管理";
+                var url=document.location.href;
+                var url1=url.split("/")[ide];
+                var url2=url.split("/")[idea];
+                var arr = [$(".nav-spanbt").eq(0).text(),
+                    $(".nav-spanbt").eq(1).text(),
+                    $(".nav-spanbt").eq(2).text(),
+                    $(".nav-spanbt").eq(3).text(),
+                    $(".nav-spanbt").eq(4).text(),
+                    $(".nav-spanbt").eq(5).text()];
+
+                if(url1==4){
+                    document.getElementById("zbt").innerText = a;
+                }else if(url1==22){
+                    document.getElementById("zbt").innerText = b;
+                }else if(url1==40){
+                    document.getElementById("zbt").innerText = c;
+                }
+                if (url2==gsxw){
+                    document.getElementById("zibt").innerText = nrgl;
+                    $("#ceherd").text(nrgl);
+                }
+                for (var i=0;i<arr.length;i++){
+                    if (arr[i]==nrgl){
+
+                    }
+                }
+            </script>

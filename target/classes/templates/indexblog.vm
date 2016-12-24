@@ -1,0 +1,71 @@
+
+
+    #parse("header.vm")
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+
+
+
+
+            #foreach($ss in $msg)
+            <div class="col-md-3" style="padding: 0px;margin: 10px;">
+
+                <div class="cover-info">
+                    <a class="l0" href="blogfind/${ss.blogId}" target="_blank">
+                        <h4>${ss.blogTitle}</h4>
+                    </a>
+                    <small>${ss.blogAbstract}</small>
+                </div>
+                <div class="cover-fields">
+                    <i class="fa fa-list-ul"></i>&nbsp;${ss.blogKeyword}
+                </div>
+                <div class="cover-stat">
+                    <i class="fa fa-eye"></i><span class="f10">&nbsp;${ss.blogPv}</span>
+                    <i class="fa fa-heart"></i><span class="f10"> &nbsp;${ss.blogFollow}</span>
+                    <div class="cover-yh ">
+                       *##**##* <a href="blogfind/<%=blo._id%>"  target="_blank" > </a>*##**##*
+                    </div>
+                </div>
+            </div>
+            #end
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+            </div>
+        </div>
+
+</div>
+
+
+
+               #* #foreach($s in $msg)
+                <tr>
+                    <td>${s.userId}</td>
+                    <td>${s.userUsername}</td>
+                    #if($s.userPassword !="")
+                        <td style="color: red;">已经设置</td>
+                    #else
+                        <td style="color: #53a0e3;">未设置</td>
+                    #end
+                    <td>${s.userPhone}</td>
+
+                    #if(!$s.userQq)
+                        <td style="color: red;">未设置</td>
+                    #else
+                        <td style="color: #53a0e3;">${s.userQq}</td>
+                    #end
+                    <td><a href="${s.userId}/edit">修改</a>&nbsp;&nbsp;<a href="${s.userId}/delete">删除</a>&nbsp;&nbsp;<a href="getbyid/${s.userId}">查看详情</a></td>
+                </tr>
+                #end*#
+
+
+
+
+
+
+
+
+    #parse("footer.vm")

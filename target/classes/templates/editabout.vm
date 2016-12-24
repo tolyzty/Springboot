@@ -1,0 +1,16 @@
+<form action=" /4/${msg.gywmId}/editabout" method="post">
+
+    id : <input type="text" name="iddd" value="${msg.gywmId}" />
+    标题:<input type="text" name="gname" id="gname" value="${msg.gywmName}" />
+    简介:<input type="text" name="gjj" id="gjj" value="${msg.gywmJj}" />
+    操作时间:<input type="text" name="uphone" id="uphone" value="${msg.gywmCzsj}" />
+    URL:<input type="text" name="gurl" id="gurl" value="${msg.gywmUrl}" />
+    内容:<input type="text" name="gnr" id="gnr" value="${msg.gywmNr}" />
+    文件名：<input type="text" name="gtpwjm" id="gtpwjm" value="${msg.gywmTpwjm}" />
+
+    <input type="submit"/>
+
+</form>
+<a href="../../index">返回index</a>
+
+

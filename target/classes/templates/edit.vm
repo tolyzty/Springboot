@@ -1,0 +1,11 @@
+<body>
+<form action=" ${edit.userId}/edit" method="post">
+    id : <input type="text" name="uid" value="${edit.userId}" />
+    username:<input type="text" name="uname" id="uname" value="${edit.userUsername}" />
+    password:<input type="password" name="upwd" id="upwd" value="${edit.userPassword}" />
+    userphone:<input type="text" name="uphone" id="uphone" value="${edit.userPhone}" />
+    userqqhao:<input type="text" name="uqqh" id="uqqh" value="${edit.userQq}" />
+    <input type="submit"/>
+</form>
+<a href="tuser.html">返回list</a>
+</body>

@@ -1,0 +1,39 @@
+#parse("header.vm")
+<div class="container">
+    <h1>欢迎您：${users.username}</h1>
+    <div class="profile">
+        <div class="row">
+            <div class="col-md-4 margin myleft">
+
+            </div>
+            <div class="col-md-8 margin">
+
+
+                #foreach($ss in $msg)
+                <div class="col-md-3" style="padding: 0px;margin: 10px;">
+
+                    <div class="cover-info">
+                        <a class="l0" href="blogfind/${ss.blogId}" target="_blank">
+                            <h4>${ss.blogTitle}</h4>
+                        </a>
+                        <small>${ss.blogAbstract}</small>
+                    </div>
+                    <div class="cover-fields">
+                        <i class="fa fa-list-ul"></i>&nbsp;${ss.blogKeyword}
+                    </div>
+                    <div class="cover-stat">
+                        <i class="fa fa-eye"></i><span class="f10">&nbsp;${ss.blogPv}</span>
+                        <i class="fa fa-heart"></i><span class="f10"> &nbsp;${ss.blogFollow}</span>
+                    </div>
+                </div>
+                #end
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+#parse("footer.vm")

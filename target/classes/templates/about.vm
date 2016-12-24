@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们管理</title>
+</head>
+
+<body>
+<input type="hidden" name="editid" id="editid" value="" />
+<div class="navbar-static-top" style="height: 50px;">
+    <div class="heardt">
+        <div class="heardt-topbar">
+            <div class="heard-topbar-left heard-left">
+                <a href="##" class="heard-topbar-logo heard-left">Logo</a>
+			 		</div>
+			 		<div class="heard-topbar-center"></div>
+            <div class="heard-topbar-right heard-right">
+                <ul class="nav navbar-nav navbar-right" style="height: 50px;margin-right:5px;font-size: 16px;">
+                    <li class="dropdown" style="height: 50px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="height: 50px;">
+                            <img src="img/m1.jpg" alt="..." class="img-circle" style="width: 28px;height: 28px; margin-right:10px;" />tolyzty@qq.com<span class="caret"></span></a>
+                        <ul class="dropdown-menu"  style="margin-right:0px;width:191px">
+                            <li><a href="#"><i class="glyphicon glyphicon-cog marginri-20"></i>个人信息</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-pencil marginri-20"></i>修改密码</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-minus-sign marginri-20"></i>安全退出</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-info-sign marginri-20"></i>帮助</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bag">
+    <div class="row">
+        <div class="colsm1left" >
+            <div class="nav-container">
+                <ul id="main-nav" class="nav nav-tabs nav-stacked" >
+                    <li>
+                        <a href="javascript:;"><i class="glyphicon glyphicon-th-large"></i><span class="nav-spannr">控制台</span></a>
+                    </li>
+                    <li>
+                        <a href="#xtSetting" class="nav-header" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="nav-spanbt">系统管理</span>
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="xtSetting" class="nav nav-list secondmenu collapse in">
+                            <li class="active"><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">用户管理</span></a></li>
+                            <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">留言管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">联动管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i><span class="nav-spannr">管理员管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">短消息管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">友情链接管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">系统参数管理</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#jkSetting" class="nav-header" data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="nav-spanbt" id="navjkgl">借款管理</span>
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="jkSetting" class="nav nav-list secondmenu collapse in">
+                            <li><a id="dshjk" href="jkSetting/dshjk.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr"  id="navmc">待审核借款</span></a></li>
+                            <li><a id="zztb"  href="jkSetting/zztb.html" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr" id="navzztb">正在招标</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">满标审核</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i><span class="nav-spannr">流标借款</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">还款管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">额度管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">数据统计与分析</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#zjSetting" class="nav-header " data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="nav-spanbt">资金管理</span>
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="zjSetting" class="nav nav-list secondmenu collapse">
+                            <li ><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">会员账户管理</span></a></li>
+                            <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">充值管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">提现管理</span></a></li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#jfSetting" class="nav-header " data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="nav-spanbt">积分管理</span>
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="jfSetting" class="nav nav-list secondmenu collapse">
+                            <li ><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">积分类型配置</span></a></li>
+                            <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">积分等级配置</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">会员积分管理</span></a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#rzSetting" class="nav-header " data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="nav-spanbt">认证管理</span>
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="rzSetting" class="nav nav-list secondmenu collapse">
+                            <li><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">实名认证管理</span></a></li>
+                            <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">手机认证管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">邮箱认证管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">用户信息管理</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#sSetting" class="nav-header " data-toggle="collapse">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="nav-spanbt">新闻内容管理</span>
+                            <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                        </a>
+                        <ul id="sSetting" class="nav nav-list secondmenu collapse">
+                            <li><a id="yhgl" href="right1.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">用户管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">菜单管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">角色管理</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-edit"></i><span class="nav-spannr">修改密码</span></a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">日志查看</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="border">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">当前位置：首页</a></li>
+                    <li class="active"  id="zibt">系统管理</li>
+                    <li class="active" id="zbt">用户管理</li>
+                </ol>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="nr" id="nr">
+            <div class="centeradd">
+                <div  class="censerah">
+                    <span style="border-left: 2px solid #0087B4;padding: 0px 10px;margin-left:20px;line-height: 40px;font-size: 16px;">用户管理</span>
+                </div>
+                <div class="centerser">
+                    <a style="color: #000000;">查询时间：</a>
+                    <input type="text" name="startime" id="startime" value=""  class="form-control"/>-
+                    <input type="text" name="endtime" id="endtime" value=""  class="form-control" />
+
+                    <input type="text" name="searchuser" id="searchuser" placeholder="姓名/邮箱/手机号"  class="form-control" />
+                    <button type="button" class="btn btn-success "  id="searchbtn">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        <span>搜索用户</span>
+                    </button>
+                </div>
+
+
+                <div style="height: 90px; width: 500px;padding-top:10px;padding-left: 20px;">
+
+                    <a class="btn btn-success" href="#" role="button" data-toggle="modal"  data-target="#myModal" id="adduser"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp;&nbsp;新增用户</a>
+                    <a class="btn btn-info" href="#" role="button" disabled="disabled"><i class="glyphicon glyphicon-edit"></i>&nbsp;&nbsp;修改用户</a>
+                    <a class="btn btn-danger" href="#" role="button"  disabled="disabled"><i class="glyphicon glyphicon-trash"></i>&nbsp;&nbsp;删除用户</a>
+                    <a class="btn btn-warning" href="#" role="button"><i class="glyphicon glyphicon-download-alt"></i>&nbsp;&nbsp;导出列表</a>
+                </div>
+                <div class="table-responsive" style="padding-left:20px;padding-right: 20px;margin-top:-20px;">
+                    <div style="height:600px;">
+                        <table class="table table-bordered" >
+                            <thead>
+                            <tr class="info">
+                                <td >
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span>序号</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td width="100px">用户名称</td>
+                                <td >用户密码</td>
+                                <td >交易密码</td>
+                                <td >银行卡号</td>
+                                <td width="100px">真实姓名</td>
+                                <td >手机号码</td>
+                                <td >邮箱地址</td>
+                                <td width="160px">认证</td>
+                                <td width="100px">当前积分</td>
+                                <td >最新登录时间</td>
+                                <td align="center">操作</td>
+                            </tr>
+                            </thead>
+                            <tbody  id="trinf" >
+                                #foreach($s in $msg)
+                                <tr>
+                                    <td>${s.gywmId}</td>
+                                    <td>${s.gywmName}</td>
+                                    #if(!${s.gywmJj})
+                                        <td> </td>
+                                    #else
+                                        <td>${s.gywmJj}</td>
+                                    #end
+                                    <td> $!date.format('yyyy-MM-dd',$!s.gywmCzsj)
+                                    </td>
+                                    <td><a href="${s.gywmId}/editabout">编辑</a>&nbsp;&nbsp;<a href="gsxwx/${s.gywmId}">查看详情</a>&nbsp;&nbsp;<a href="${s.gywmId}/deleteabout">删除</a></td>
+                                </tr>
+                                #end
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="page" class="page" style="height: 40px;margin-bottom:20px;float:right;"></div>
+                </div>
+                <div id="loading" class=""  style="margin-left:700px;display:none;margin-top:-200px;"><img src="img/ut.gif"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">新增用户信息</h4>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span class="bnt borderra">用户名称</span>
+                            <div class="form-group inpdiv padrig" >
+                                <input type="text" class="form-control inpwth" placeholder="用户名称" name="user_username" id="user_username" />
+                            </div>
+                        </td>
+                        <td><span class="bnt borderra">用户密码</span>
+                            <div class="form-group inpdiv">
+                                <input type="text" class="form-control inpwth" placeholder="用户密码" name="user_password" id="user_password" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span class="bnt borderra">银行卡号</span>
+                            <div class="form-group inpdiv padrig" >
+                                <input type="text" class="form-control inpwth" placeholder="银行卡号" name="user_yhk" id="user_yhk" />
+                            </div>
+                        </td>
+                        <td><span class="bnt borderra">交易密码</span>
+                            <div class="form-group inpdiv">
+                                <input type="text" class="form-control inpwth" placeholder="交易密码" name="user_paypwd" id="user_paypwd" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span class="bnt borderra">真实姓名</span>
+                            <div class="form-group inpdiv padrig" >
+                                <input type="text" class="form-control inpwth" placeholder="真实姓名" name="user_ralename" id="user_ralename" />
+                            </div>
+                        </td>
+                        <td><span class="bnt borderra">手机号码</span>
+                            <div class="form-group inpdiv">
+                                <input type="text" class="form-control inpwth" placeholder="手机号码" name="user_phone" id="user_phone" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span class="bnt borderra">邮箱地址</span>
+                            <div class="form-group inpdiv padrig" >
+                                <input type="text" class="form-control inpwth" placeholder="邮箱地址" name="user_email" id="user_email" />
+                            </div>
+                        </td>
+                        <td><span class="bnt borderra">当前积分</span>
+                            <div class="form-group inpdiv">
+                                <input type="text" class="form-control inpwth" placeholder="当前积分" name="user_dqjf" id="user_dqjf" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span class="bnt borderra">认证信息</span>
+                            <div class="inpdiv inprebz" id="inpdiv">
+                                <!-- <div class="form-control inpwth">-->
+                                <i class="glyphicon glyphicon-phone padrig-20" title="手机认证"></i>
+                                <input type="hidden" name="sjrzmod" id="sjrzmod" value="0" />
+                                <i class="glyphicon glyphicon-user padrig-20" title="身份认证"></i>
+                                <input type="hidden" name="sfrzmod" id="sfrzmod" value="0" />
+                                <i class="glyphicon glyphicon-envelope padrig-20" title="邮箱认证"></i>
+                                <input type="hidden" name="yxrzmod" id="yxrzmod" value="0" />
+                                <i class="glyphicon glyphicon-credit-card padrig-20" title="银行卡"></i>
+                                <input type="hidden" name="yhkmod" id="yhkmod" value="0" />
+                                <!-- </div>-->
+
+                            </div>
+                        </td>
+                        <td><span class="bnt borderra">登陆时间</span>
+                            <div class="form-group inpdiv" style="">
+                                <input type="text" class="form-control inpwth" placeholder="登陆时间" name="user_addtime" id="user_addtime"  disabled/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="cleanbtn">关闭</button>
+                <button type="button" class="btn btn-success" id="btnSave"  style="display:none;">保存</button>
+                <button type="button" class="btn btn-success" id="btnEdit" style="display:none;">修改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!-- 触发模态弹出窗的元素 -->
+<!-- 模态弹出窗 -->
+<div class="modal fade" id="modelete">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header delered">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">删除用户</h4>
+            </div>
+            <div class="modal-body">
+                <h5>是否要删除用户信息,删除后将无法恢复,请慎重！</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-danger" id="butdelete">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+</body>
+</html>

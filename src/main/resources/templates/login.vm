@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/index.css" />
+<script type="text/javascript" src="/js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="/js/bootstrap.js" ></script>
+<script type="text/javascript" src="/js/jquery-asDatepicker.min.js" ></script>
+<script type="text/javascript" src="/laypage-v1.3/laypage/laypage.js"></script>
+<body>
+<div class="container">
+    <br>
+
+    <form name="myform" method="get" action="/logins">
+        <div class="row">
+            用户名：<input type="text" name="username" value="" placeholder="填写用户名" />
+            <br>
+            密码：<input type="password" name="password" value="" />
+            <br>
+            <input type="submit" value="go"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>

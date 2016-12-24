@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ace.mapper.LablesMapper" >
+  <resultMap id="BaseResultMap" type="com.ace.pojo.Lables" >
+    <id column="lable_id" property="lableId" jdbcType="INTEGER" />
+    <result column="lable_userid" property="lableUserid" jdbcType="INTEGER" />
+    <result column="lable_stut" property="lableStut" jdbcType="INTEGER" />
+    <result column="lable_info" property="lableInfo" jdbcType="VARCHAR" />
+    <result column="lable_time" property="lableTime" jdbcType="TIMESTAMP" />
+    <result column="lable_blogid" property="lableBlogid" javaType="INTEGER"/>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    lable_id, lable_userid,lable_blogid, lable_stut, lable_info, lable_time
+  </sql>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_lables
+    where lable_id = #{lableId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ace.pojo.Lables" >
+    insert into t_lables (lable_id, lable_userid, lable_blogid,lable_stut,lable_info, lable_time)
+    values (#{lableId,jdbcType=INTEGER}, #{lableUserid,jdbcType=INTEGER}, #{lableBlogid,jdbcType=INTEGER},#{lableStut,jdbcType=INTEGER},
+      #{lableInfo,jdbcType=VARCHAR}, #{lableTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ace.pojo.Lables" >
+    insert into t_lables
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="lableId != null" >
+        lable_id,
+      </if>
+      <if test="lableUserid != null" >
+        lable_userid,
+      </if>
+      <if test="lableBlogid != null" >
+        lable_blogid,
+      </if>
+      <if test="lableStut != null" >
+        lable_stut,
+      </if>
+      <if test="lableInfo != null" >
+        lable_info,
+      </if>
+      <if test="lableTime != null" >
+        lable_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="lableId != null" >
+        #{lableId,jdbcType=INTEGER},
+      </if>
+      <if test="lableUserid != null" >
+      #{lableUserid,jdbcType=INTEGER},
+    </if>
+      <if test="lableBlogid != null" >
+        #{lableBlogid,jdbcType=INTEGER},
+      </if>
+      <if test="lableStut != null" >
+        #{lableStut,jdbcType=INTEGER},
+      </if>
+      <if test="lableInfo != null" >
+        #{lableInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="lableTime != null" >
+        #{lableTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ace.pojo.Lables" >
+    update t_lables
+    <set >
+      <if test="lableUserid != null" >
+        lable_userid = #{lableUserid,jdbcType=INTEGER},
+      </if>
+      <if test="lableBlogid != null" >
+        lable_blogid = #{lableBlogid,jdbcType=INTEGER},
+      </if>
+      <if test="lableStut != null" >
+        lable_stut = #{lableStut,jdbcType=INTEGER},
+      </if>
+      <if test="lableInfo != null" >
+        lable_info = #{lableInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="lableTime != null" >
+        lable_time = #{lableTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where lable_id = #{lableId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ace.pojo.Lables" >
+    update t_lables
+    set lable_userid = #{lableUserid,jdbcType=INTEGER},
+    lable_blogid = #{lableBlogid,jdbcType=INTEGER},
+      lable_stut = #{lableStut,jdbcType=INTEGER},
+      lable_info = #{lableInfo,jdbcType=VARCHAR},
+      lable_time = #{lableTime,jdbcType=TIMESTAMP}
+    where lable_id = #{lableId,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from t_lables
+    where lable_id = #{lableId,jdbcType=INTEGER}
+  </select>
+
+  <select id="findById" resultMap="BaseResultMap" parameterType="com.ace.pojo.Lables">
+    SELECT lable_info FROM t_lables
+    where lable_userid = #{lableUserid,jdbcType=INTEGER} AND lable_blogid = #{lableBlogid,jdbcType=INTEGER}
+  </select>
+
+  <update id="insertinfo" parameterType="com.ace.pojo.Lables">
+    insert into t_lables (lable_userid, lable_blogid,lable_stut,lable_info, lable_time)
+     values (#{lableUserid,jdbcType=INTEGER}, #{lableBlogid,jdbcType=INTEGER},#{lableStut,jdbcType=INTEGER},#{lableInfo,jdbcType=VARCHAR}, #{lableTime,jdbcType=TIMESTAMP})
+  </update>
+</mapper>

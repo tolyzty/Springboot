@@ -1,0 +1,98 @@
+<div style="border: 1px solid #333333;margin-left: 50px;">    #parse("abc.vm")</div>
+<div class="row">
+    <div class="colsm1left" >
+        <div class="nav-container">
+            <ul id="main-nav" class="nav nav-tabs nav-stacked" >
+                <li>
+                    <a href="javascript:;"><i class="glyphicon glyphicon-th-large"></i><span class="nav-spannr">控制台</span></a>
+                </li>
+                <li>
+                    <a href="#xtSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-spanbt">系统管理</span>
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="xtSetting" class="nav nav-list secondmenu collapse ">
+                        <li><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">用户管理</span></a></li>
+                        <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">留言管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">联动管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i><span class="nav-spannr">管理员管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">短消息管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">友情链接管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">系统参数管理</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#jkSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-spanbt" id="navjkgl">借款管理</span>
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="jkSetting" class="nav nav-list secondmenu collapse ">
+                        <li><a id="dshjk" href="jkSetting/dshjk.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr"  id="navmc">待审核借款</span></a></li>
+                        <li><a id="zztb"  href="jkSetting/zztb.html" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr" id="navzztb">正在招标</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">满标审核</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-edit"></i><span class="nav-spannr">流标借款</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">还款管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">额度管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-eye-open"></i><span class="nav-spannr">数据统计与分析</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#zjSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-spanbt">资金管理</span>
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="zjSetting" class="nav nav-list secondmenu collapse">
+                        <li ><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">会员账户管理</span></a></li>
+                        <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">充值管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">提现管理</span></a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#jfSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-spanbt">积分管理</span>
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="jfSetting" class="nav nav-list secondmenu collapse">
+                        <li ><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">积分类型配置</span></a></li>
+                        <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">积分等级配置</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">会员积分管理</span></a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#rzSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-spanbt">认证管理</span>
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="rzSetting" class="nav nav-list secondmenu collapse">
+                        <li><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">实名认证管理</span></a></li>
+                        <li><a href="#" ><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">手机认证管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">邮箱认证管理</span></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">用户信息管理</span></a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#sSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-spanbt">内容管理</span>
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="sSetting" class="nav nav-list secondmenu collapse">
+                        <li><a id="yhgl" href="40/gsxw"><i class="glyphicon glyphicon-user"></i><span class="nav-spannr">行业动态</span></a></li>
+                        <li><a href="4/gsxw"><i class="glyphicon glyphicon-th-list"></i><span class="nav-spannr">公司新闻</span></a></li>
+                        <li><a href="22/gsxw"><i class="glyphicon glyphicon-asterisk"></i><span class="nav-spannr">最新公告</span></a></li>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+        </div>

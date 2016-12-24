@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ace.mapper.GywmMapper" >
+  <resultMap id="BaseResultMap" type="com.ace.pojo.Gywm" >
+    <result column="gywm_id" property="gywmId" jdbcType="BIGINT" />
+    <result column="gywm_bkid" property="gywmBkid" jdbcType="BIGINT" />
+    <result column="gywm_name" property="gywmName" jdbcType="LONGNVARCHAR" />
+    <result column="gywm_czsj" property="gywmCzsj" jdbcType="TIMESTAMP" />
+    <result column="gywm_czr" property="gywmCzr" jdbcType="NVARCHAR" />
+    <result column="gywm_url" property="gywmUrl" jdbcType="LONGNVARCHAR" />
+    <result column="gywm_jj" property="gywmJj" jdbcType="LONGNVARCHAR" />
+    <result column="gywm_nr" property="gywmNr" jdbcType="LONGNVARCHAR" />
+    <result column="gywm_djl" property="gywmDjl" jdbcType="BIGINT" />
+    <result column="gywm_tpwjm" property="gywmTpwjm" jdbcType="NVARCHAR" />
+    <result column="gywm_zt" property="gywmZt" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ace.pojo.Gywm" >
+    insert into web_gywm (gywm_id, gywm_bkid, gywm_name, 
+      gywm_czsj, gywm_czr, gywm_url, 
+      gywm_jj, gywm_nr, gywm_djl, 
+      gywm_tpwjm, gywm_zt)
+    values (#{gywmId,jdbcType=BIGINT}, #{gywmBkid,jdbcType=BIGINT}, #{gywmName,jdbcType=LONGNVARCHAR}, 
+      #{gywmCzsj,jdbcType=TIMESTAMP}, #{gywmCzr,jdbcType=NVARCHAR}, #{gywmUrl,jdbcType=LONGNVARCHAR}, 
+      #{gywmJj,jdbcType=LONGNVARCHAR}, #{gywmNr,jdbcType=LONGNVARCHAR}, #{gywmDjl,jdbcType=BIGINT}, 
+      #{gywmTpwjm,jdbcType=NVARCHAR}, #{gywmZt,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ace.pojo.Gywm" >
+    insert into web_gywm
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="gywmId != null" >
+        gywm_id,
+      </if>
+      <if test="gywmBkid != null" >
+        gywm_bkid,
+      </if>
+      <if test="gywmName != null" >
+        gywm_name,
+      </if>
+      <if test="gywmCzsj != null" >
+        gywm_czsj,
+      </if>
+      <if test="gywmCzr != null" >
+        gywm_czr,
+      </if>
+      <if test="gywmUrl != null" >
+        gywm_url,
+      </if>
+      <if test="gywmJj != null" >
+        gywm_jj,
+      </if>
+      <if test="gywmNr != null" >
+        gywm_nr,
+      </if>
+      <if test="gywmDjl != null" >
+        gywm_djl,
+      </if>
+      <if test="gywmTpwjm != null" >
+        gywm_tpwjm,
+      </if>
+      <if test="gywmZt != null" >
+        gywm_zt,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="gywmId != null" >
+        #{gywmId,jdbcType=BIGINT},
+      </if>
+      <if test="gywmBkid != null" >
+        #{gywmBkid,jdbcType=BIGINT},
+      </if>
+      <if test="gywmName != null" >
+        #{gywmName,jdbcType=LONGNVARCHAR},
+      </if>
+      <if test="gywmCzsj != null" >
+        #{gywmCzsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gywmCzr != null" >
+        #{gywmCzr,jdbcType=NVARCHAR},
+      </if>
+      <if test="gywmUrl != null" >
+        #{gywmUrl,jdbcType=LONGNVARCHAR},
+      </if>
+      <if test="gywmJj != null" >
+        #{gywmJj,jdbcType=LONGNVARCHAR},
+      </if>
+      <if test="gywmNr != null" >
+        #{gywmNr,jdbcType=LONGNVARCHAR},
+      </if>
+      <if test="gywmDjl != null" >
+        #{gywmDjl,jdbcType=BIGINT},
+      </if>
+      <if test="gywmTpwjm != null" >
+        #{gywmTpwjm,jdbcType=NVARCHAR},
+      </if>
+      <if test="gywmZt != null" >
+        #{gywmZt,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select top(10)* from web_gywm where gywm_bkid = #{gywmBkid} and gywm_zt = 0 order by gywm_czsj DESC
+  </select>
+  <select id="selectByKey" resultMap="BaseResultMap" parameterType="com.ace.pojo.Gywm">
+    select * from web_gywm where gywm_id = #{gywmId}  order by gywm_czsj DESC
+  </select>
+  <update id="updateByGywm" parameterType="com.ace.pojo.Gywm" >
+     update web_gywm
+     SET gywm_name = #{gywmName},
+     gywm_czsj = #{gywmCzsj},
+     gywm_url = #{gywmUrl},
+     gywm_jj = #{gywmJj},
+     gywm_nr = #{gywmNr},
+     gywm_tpwjm =#{gywmTpwjm}
+     where gywm_id = #{gywmId}
+  </update>
+</mapper>

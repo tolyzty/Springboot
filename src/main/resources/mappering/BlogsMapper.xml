@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ace.mapper.BlogsMapper" >
+  <resultMap id="BaseResultMap" type="com.ace.pojo.Blogs" >
+    <id column="blog_id" property="blogId" jdbcType="INTEGER" />
+    <result column="blog_userid" property="blogUserid" jdbcType="INTEGER" />
+    <result column="blog_title" property="blogTitle" jdbcType="VARCHAR" />
+    <result column="blog_abstract" property="blogAbstract" jdbcType="VARCHAR" />
+    <result column="blog_content" property="blogContent" jdbcType="VARCHAR" />
+    <result column="blog_keyword" property="blogKeyword" jdbcType="VARCHAR" />
+    <result column="blog_pv" property="blogPv" jdbcType="INTEGER" />
+    <result column="blog_follow" property="blogFollow" jdbcType="INTEGER" />
+    <result column="blog_time" property="blogTime" jdbcType="TIMESTAMP" />
+    <result column="blog_zt" property="blogZt" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    blog_id, blog_userid, blog_title, blog_abstract, blog_content, blog_keyword, blog_pv, 
+    blog_follow, blog_time, blog_zt
+  </sql>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_blogs
+    where blog_id = #{blogId,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.ace.pojo.Blogs" >
+    insert into t_blogs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="blogId != null" >
+        blog_id,
+      </if>
+      <if test="blogUserid != null" >
+        blog_userid,
+      </if>
+      <if test="blogTitle != null" >
+        blog_title,
+      </if>
+      <if test="blogAbstract != null" >
+        blog_abstract,
+      </if>
+      <if test="blogContent != null" >
+        blog_content,
+      </if>
+      <if test="blogKeyword != null" >
+        blog_keyword,
+      </if>
+      <if test="blogPv != null" >
+        blog_pv,
+      </if>
+      <if test="blogFollow != null" >
+        blog_follow,
+      </if>
+      <if test="blogTime != null" >
+        blog_time,
+      </if>
+      <if test="blogZt != null" >
+        blog_zt,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="blogId != null" >
+        #{blogId,jdbcType=INTEGER},
+      </if>
+      <if test="blogUserid != null" >
+        #{blogUserid,jdbcType=INTEGER},
+      </if>
+      <if test="blogTitle != null" >
+        #{blogTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="blogAbstract != null" >
+        #{blogAbstract,jdbcType=VARCHAR},
+      </if>
+      <if test="blogContent != null" >
+        #{blogContent,jdbcType=VARCHAR},
+      </if>
+      <if test="blogKeyword != null" >
+        #{blogKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="blogPv != null" >
+        #{blogPv,jdbcType=INTEGER},
+      </if>
+      <if test="blogFollow != null" >
+        #{blogFollow,jdbcType=INTEGER},
+      </if>
+      <if test="blogTime != null" >
+        #{blogTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="blogZt != null" >
+        #{blogZt,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ace.pojo.Blogs" >
+    update t_blogs
+    <set >
+      <if test="blogUserid != null" >
+        blog_userid = #{blogUserid,jdbcType=INTEGER},
+      </if>
+      <if test="blogTitle != null" >
+        blog_title = #{blogTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="blogAbstract != null" >
+        blog_abstract = #{blogAbstract,jdbcType=VARCHAR},
+      </if>
+      <if test="blogContent != null" >
+        blog_content = #{blogContent,jdbcType=VARCHAR},
+      </if>
+      <if test="blogKeyword != null" >
+        blog_keyword = #{blogKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="blogPv != null" >
+        blog_pv = #{blogPv,jdbcType=INTEGER},
+      </if>
+      <if test="blogFollow != null" >
+        blog_follow = #{blogFollow,jdbcType=INTEGER},
+      </if>
+      <if test="blogTime != null" >
+        blog_time = #{blogTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="blogZt != null" >
+        blog_zt = #{blogZt,jdbcType=INTEGER},
+      </if>
+    </set>
+    where blog_id = #{blogId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ace.pojo.Blogs" >
+    update t_blogs
+    set blog_userid = #{blogUserid,jdbcType=INTEGER},
+      blog_title = #{blogTitle,jdbcType=VARCHAR},
+      blog_abstract = #{blogAbstract,jdbcType=VARCHAR},
+      blog_content = #{blogContent,jdbcType=VARCHAR},
+      blog_keyword = #{blogKeyword,jdbcType=VARCHAR},
+      blog_pv = #{blogPv,jdbcType=INTEGER},
+      blog_follow = #{blogFollow,jdbcType=INTEGER},
+      blog_time = #{blogTime,jdbcType=TIMESTAMP},
+      blog_zt = #{blogZt,jdbcType=INTEGER}
+    where blog_id = #{blogId,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectAll" resultMap="BaseResultMap">
+    select * from t_blogs where blog_zt = 0;
+  </select>
+
+
+  <insert id="insert" parameterType="com.ace.pojo.Blogs" >
+    insert into t_blogs ( blog_userid, blog_title,
+    blog_abstract, blog_content, blog_keyword,
+    blog_pv, blog_follow, blog_time,
+    blog_zt)
+    values (#{blogUserid,jdbcType=INTEGER}, #{blogTitle,jdbcType=VARCHAR},
+    #{blogAbstract,jdbcType=VARCHAR}, #{blogContent,jdbcType=VARCHAR}, #{blogKeyword,jdbcType=VARCHAR},
+    #{blogPv,jdbcType=INTEGER}, #{blogFollow,jdbcType=INTEGER}, #{blogTime,jdbcType=TIMESTAMP},
+    #{blogZt,jdbcType=INTEGER})
+  </insert>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select *
+    from t_blogs
+    where blog_id = #{blogId,jdbcType=INTEGER} AND blog_zt = 0
+  </select>
+
+  <select id="selectById" resultMap="BaseResultMap">
+     select *
+    from t_blogs
+    where blog_userid = #{blogUserid,jdbcType=INTEGER} AND blog_zt = 0
+  </select>
+
+  <update id="updatepv"  parameterType="com.ace.pojo.Blogs">
+    update t_blogs SET blog_pv = #{blogPv,jdbcType=INTEGER}
+    WHERE blog_id = #{blogId,jdbcType=INTEGER}
+  </update>
+
+  <update id="updatefollow"  parameterType="com.ace.pojo.Blogs">
+    update t_blogs SET blog_follow = #{blogFollow,jdbcType=INTEGER}
+    WHERE blog_id = #{blogId,jdbcType=INTEGER}
+  </update>
+
+</mapper>

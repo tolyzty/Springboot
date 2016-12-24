@@ -1,0 +1,67 @@
+#parse("header.vm")
+<div class="container">
+    <h1>${msg.blogTitle}</h1>
+    <h2>${msg.blogPv}</h2>
+    <button id="but"><span>点击搜藏</span></button>
+    <hr>
+    <h5>${users.id}</h5>
+</div>
+
+<script>
+
+
+    $(function () {
+        var uid = ${users.id};
+        var bid = ${msg.blogId};
+        var data = {"uid":uid,"bid":bid};
+        if (uid!=null){
+            $.ajax({
+                url:"../Getinfo",
+                type:"post",
+                data:data,
+                success:function (data,status) {
+                    if (data==""){
+
+                    }else{
+                        $("#but").remove();
+                    }
+                },
+                error:function (status) {
+                    alert("网络错误,请重试");
+                }
+            });
+        }else{
+            alert("请登录");
+        }
+
+    });
+
+    $("#but").click(function () {
+        dz();
+    });
+    function dz() {
+
+        var uid = ${users.id};
+        var bid = ${msg.blogId};
+        var data = {"uid":uid,"bid":bid};
+
+        $.ajax({
+           url:"../Collection",
+            type:"post",
+            data:data,
+            success:function (data,status) {
+               alert(data);
+                if (data==1){
+                    $("#but").remove();
+                }
+
+            },
+            error:function (status) {
+                alert(status);
+            }
+        });
+    }
+
+
+</script>
+#parse("footer.vm");

@@ -1,0 +1,5 @@
+<h1>${msg.GywmId}</h1>
+<h1>${msg.GywmName}</h1>
+<h1>$!date.format('yyyy-MM-dd HH:mm:ss',$!msg.gywmCzsj)</h1>
+<h2>${msg.GywmJj}</h2>
+<h2>${msg.GywmNr}</h2>

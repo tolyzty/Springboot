@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<style>
+    tr{
+        height: 30px;
+    }
+    td{
+        width: 200px;
+        text-align: center;
+    }
+</style>
+<body>
+<table border="1">
+    <tr>
+        <td >序号</td>
+        <td >名字</td>
+        <td >密码</td>
+        <td >手机号</td>
+        <td >QQ号</td>
+        <td>操作</td>
+    </tr>
+
+
+    #foreach($s in $msg)
+    <tr>
+        <td>${s.id}</td>
+        <td>${s.username}</td>
+            #if($s.password !="")
+              <td style="color: red;">已经设置</td>
+            #else
+                <td style="color: #53a0e3;">未设置</td>
+            #end
+        <td>${s.phone}</td>
+
+        #if(!$s.email)
+            <td style="color: red;">未设置</td>
+        #else
+            <td style="color: #53a0e3;">${s.emial}</td>
+        #end
+        <td><a href="${s.id}/edit">修改</a>&nbsp;&nbsp;<a href="${s.id}/delete">删除</a>&nbsp;&nbsp;<a href="getbyid/${s.id}">查看详情</a></td>
+    </tr>
+    #end
+
+</table>
+</body>
+</html>

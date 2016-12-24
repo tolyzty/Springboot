@@ -1,0 +1,8 @@
+<div>
+
+    <form action="/hthomes" method="post">
+        <input name="yzm" id="yzm" value="" type="text"/>
+        <input type="submit" value="提交"/>
+    </form>
+
+</div>
